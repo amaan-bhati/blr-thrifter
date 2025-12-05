@@ -1,28 +1,37 @@
-import type { Config } from 'tailwindcss'
+import type { Config } from "tailwindcss";
 
 const config: Config = {
   content: [
-    './pages/**/*.{js,ts,jsx,tsx,mdx}',
-    './components/**/*.{js,ts,jsx,tsx,mdx}',
-    './app/**/*.{js,ts,jsx,tsx,mdx}',
+    "./pages/**/*.{js,ts,jsx,tsx,mdx}",
+    "./components/**/*.{js,ts,jsx,tsx,mdx}",
+    "./app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
     extend: {
       colors: {
-        'gh-canvas': '#0d1117',
-        'gh-subtle': '#161b22',
-        'gh-border': '#30363d',
-        'gh-text-primary': '#c9d1d9',
-        'gh-text-secondary': '#8b949e',
-        'gh-green': '#238636',
-        'gh-green-hover': '#2ea043',
-        'gh-blue': '#58a6ff',
-        'gh-orange': '#f78166',
-        'gh-btn-bg': '#21262d',
-        'gh-btn-hover': '#30363d',
+        canvas: "#0d1117",
+        subtle: "#161b22",
+        border: "#30363d",
+        primary: "#c9d1d9",
+        secondary: "#8b949e",
+        "accent-green": "#238636",
+        "accent-green-hover": "#2ea043",
+        "accent-blue": "#58a6ff",
+        "accent-orange": "#f78166",
+        "btn-bg": "#21262d",
+        "btn-hover": "#30363d",
+      },
+      animation: {
+        fadeIn: "fadeIn 0.3s ease-in-out",
+      },
+      keyframes: {
+        fadeIn: {
+          "0%": { opacity: "0", transform: "translateY(5px)" },
+          "100%": { opacity: "1", transform: "translateY(0)" },
+        },
       },
     },
   },
   plugins: [],
-}
-export default config
+};
+export default config;
